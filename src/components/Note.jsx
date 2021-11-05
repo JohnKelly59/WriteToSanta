@@ -12,7 +12,7 @@ function Note(props) {
     <Zoom in="true">
     <div className="note">
       <h1>{props.title}</h1>
-      <p>{props.content}</p>
+      <p>{props.description}</p>
       <button onClick={handleClick}><DeleteForeverIcon /></button>
     </div>
     </Zoom>

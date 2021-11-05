@@ -5,7 +5,7 @@ import Zoom from '@material-ui/core/Zoom';
 function CreateArea(props) {
   const [note, setNote] = useState({
     title: "",
-    content: ""
+    description: ""
   });
 
   function handleChange(event) {
@@ -27,8 +27,8 @@ function CreateArea(props) {
   function submitNote(event) {
     props.onAdd(note);
     setNote({
-      title: "",
-      content: ""
+     title: "",
+      description: ""
     });
     event.preventDefault();
   }
@@ -45,9 +45,9 @@ function CreateArea(props) {
         /> : null }
         <textarea
         onClick={pressed}
-          name="content"
+          name="description"
           onChange={handleChange}
-          value={note.content}
+          value={note.description}
           placeholder="Take a note..."
            rows={opened ? 3 : 1}
         />
