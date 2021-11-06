@@ -29,9 +29,13 @@ const ContactUs = (props) => {
 
   return (
     <form className="send" ref={form} onSubmit={sendEmail}>
-      <input  className="mail" 
-      type="email"  name="user_email" placeholder="e-mail"  onClick={press}/>
+      <input onClick={press} name="from_name" placeholder="Name" autocomplete="off"/>
+      {open ?
+      <input className="mail"  type="email"  name="user_email" placeholder="e-Mail" autocomplete="off"/>
+      : null}
+      {open ?
       <textarea name="message" value={props.stuff} />
+      : null}
      <Zoom in={open}><Fab type="submit" onClick={props.restart}><SendIcon /></Fab></Zoom>
     </form>
   );

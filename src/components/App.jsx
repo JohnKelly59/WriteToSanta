@@ -25,11 +25,13 @@ function App() {
 
 
 function eraseNotes(){
-  setNotes([]);
+  
     setMessage(!message);
+    setTimeout(function() {
+      setNotes([])}, 1500);
   };
 
-
+  var gifts = notes.map(gift =>"\n " + gift.title + ": " + gift.description);
 
   return (
     <div>
@@ -52,8 +54,10 @@ function eraseNotes(){
               className="form">
        
         </form>
+
         <ContactUs
-         stuff={JSON.stringify(notes)}
+
+         stuff={gifts}
          restart= {eraseNotes}
          />
            

@@ -114,13 +114,13 @@ form.send button {
 form.send{
   position: absolute;
   font-size: .8em;
-left: 40%;
+left: 41%;
   width: 250px;
   background: #fff;
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
-  bottom: 0px;
+  bottom: 30px;
 
 }
 
