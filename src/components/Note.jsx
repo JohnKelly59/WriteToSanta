@@ -9,7 +9,7 @@ function Note(props) {
   }
 
   return (
-    <Zoom in="true">
+    <Zoom in= {true}>
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.description}</p>

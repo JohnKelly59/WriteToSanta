@@ -5,19 +5,28 @@ import Zoom from '@material-ui/core/Zoom';
 function CreateArea(props) {
   const [note, setNote] = useState({
     title: "",
-    description: ""
+    description: "",
+    link: ""
   });
 
   function handleChange(event) {
     const { name, value } = event.target;
 
     setNote(prevNote => {
+      if (name === "title"){  
       return {
         ...prevNote,
-        [name]: value
-      };
-    });
-  }
+        [name]: value,
+        link : "https://www.amazon.com/s?k=" + value.replace(/\s/g, "+")
+      };}
+      else{
+        return {
+          ...prevNote,
+          [name] : value
+        };}
+      })
+    }
+  
   const [opened, setOpened] = useState(false)
   
   function pressed(){
@@ -31,6 +40,7 @@ function CreateArea(props) {
       description: ""
     });
     event.preventDefault();
+console.log(note)
   }
 
   return (

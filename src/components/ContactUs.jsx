@@ -5,7 +5,6 @@ import Fab from '@material-ui/core/Fab';
 import SendIcon from '@material-ui/icons/Send';
 
 const ContactUs = (props) => {
-  console.log(props.con)
   const form = useRef();
 
   const [open, setOpen] = useState(false)
@@ -29,9 +28,9 @@ const ContactUs = (props) => {
 
   return (
     <form className="send" ref={form} onSubmit={sendEmail}>
-      <input onClick={press} name="from_name" placeholder="Name" autocomplete="off"/>
+      <input onClick={press} name="from_name" placeholder="Name" autoComplete="off"/>
       {open ?
-      <input className="mail"  type="email"  name="user_email" placeholder="e-Mail" autocomplete="off"/>
+      <input className="mail"  type="email"  name="user_email" placeholder="e-Mail" autoComplete="off"/>
       : null}
       {open ?
       <textarea name="message" value={props.stuff} />

@@ -3,6 +3,7 @@ import Header from "./Header";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 import ContactUs from "./ContactUs";
+
 function App() {
   const [notes, setNotes] = useState([]);
   const [message, setMessage] = useState(false);
@@ -31,10 +32,27 @@ function eraseNotes(){
       setNotes([])}, 1500);
   };
 
-  var gifts = notes.map(gift =>"\n " + gift.title + ": " + gift.description);
+  var gifts = notes.map(gift =>"\n " + gift.title + ": " + gift.description + gift.link);
+
+
+
+  // const [data, setData] = React.useState(null);
+
+  // React.useEffect(() => {
+  //   fetch("/api")
+  //     .then((res) => res.json())
+  //     .then((data) => setData(data.message));
+  // }, []);
+
+
+
+
+
 
   return (
     <div>
+{/* <p>{!data ? "Loading..." : data}</p> */}
+
       <Header />
       {message && <h2>Sent</h2>}
       <CreateArea onAdd={addNote} />
