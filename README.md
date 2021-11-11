@@ -7,4 +7,4 @@ address to whom they want to send the list to. The email will contain the title,
 and amazon link to each gift. This app brings a whole new meaning to convenience for 
 parents/guardians who want to get a head start on shopping for the Holiday Season. 
 Happy Holidays and Enjoy!
-Build: React.js, HTML, CSS, JavaScript
+Build: React.js, HTML, CSS, JavaScript, API
